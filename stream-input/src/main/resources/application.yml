@@ -1,0 +1,13 @@
+
+
+
+server:
+  port: 8877
+spring:
+  cloud:
+    stream:
+      kafka:
+        bindings:
+          input:
+            destination:  demo
+            group: ss

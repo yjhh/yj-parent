@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+  xmlns="http://config.schema/config"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  targetNamespace="http://config.schema/config"
+>
+
+  <xsd:complexType name="registry">
+    <xsd:attribute name="protcal" type="xsd:string"/>
+    <xsd:attribute name="url" type="xsd:string"/>
+    <xsd:attribute name="version" type="xsd:string"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="serviceType">
+    <xsd:attribute name="port" type="xsd:int"/>
+  </xsd:complexType>
+  
+  <xsd:complexType name="clientType">
+    <xsd:attribute name="retry" type="xsd:int"/>
+    <xsd:attribute name="loadbalance" type="xsd:string"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="application">
+    <xsd:attribute name="name" type="xsd:string"/>
+  </xsd:complexType>
+
+  <xsd:element name="service" type="serviceType">
+  </xsd:element>
+
+  <xsd:element name="application" type="application">
+
+  </xsd:element>
+
+  <xsd:element name="client" type="clientType">
+  </xsd:element>
+
+  <xsd:element name="registry" type="registry">
+  </xsd:element>
+
+</xsd:schema>

@@ -1,0 +1,19 @@
+server:
+  port: 8899
+spring:
+  application:
+    name: stream-app
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: localhost
+          auto-create-topics: true
+        bindings:
+          output:
+            destination:  demo
+            producer:
+              sync:  true
+
+
+
